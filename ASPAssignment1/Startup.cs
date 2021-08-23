@@ -63,6 +63,11 @@ namespace ASPAssignment1
                     pattern: "/FeverCheck",
                     defaults: new { controller = "Doctor", action = "Index"}
                 );
+                endpoints.MapControllerRoute(
+                    name: "guessingGame",
+                    pattern: "/GuessingGame",
+                    defaults: new { controller = "Home", action = "GuessingGame" }
+                );
             });
         }
     }
