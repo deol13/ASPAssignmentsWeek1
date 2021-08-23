@@ -34,6 +34,7 @@ namespace ASPAssignment1.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult GuessingGame()
         {
             Random rand = new Random();
