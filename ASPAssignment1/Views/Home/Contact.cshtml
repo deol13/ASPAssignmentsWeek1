@@ -1,12 +1,11 @@
-﻿
+﻿@model ASPAssignment1.Models.ContactInfo
+
 @{
     ViewData["Title"] = "Contact";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>Contact</h1>
 
-<p>
-    Gunnar Måsesson <br />
-    0712352341  <br />
-    fluffTJ@gmail.com
-</p>
+<p>Name: @Model.Name</p>
+<p>Phone number: @Model.PhoneNumber</p>
+<p>Email: @Model.Email</p>

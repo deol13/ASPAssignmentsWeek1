@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ASPAssignment1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace ASPAssignment1.Controllers
         }
         public IActionResult Contact()
         {
-            return View();
+            ContactInfo me = new ContactInfo();
+            me.Name = "Eric Husman";
+            me.PhoneNumber = "079812341";
+            me.Email = "fluffutyr.num@gmail.com";
+
+            return View(me);
         }
         public IActionResult Projects()
         {
