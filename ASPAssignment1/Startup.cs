@@ -16,6 +16,15 @@ namespace ASPAssignment1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(300);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddMvc();
         }
 
@@ -39,8 +48,7 @@ namespace ASPAssignment1
 
             app.UseRouting();
 
-            //Enables Authentication means
-            //app.UseAuthentication();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
