@@ -11,11 +11,13 @@
     <header>
         <nav>
             <div>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ASP_Assignments</a>
-
+                
                 <ul>
                     <li>
-                        <p class="navLink"> @Html.ActionLink("Home","Index","Home", null, new { @class = "actionLink" }) </p>
+                        <img src="MyLogo.png" alt="My custom logo" />
+                    </li>
+                    <li>
+                        <p class="navLink"> @Html.ActionLink("Home", "Index", "Home", null, new { @class = "actionLink" }) </p>
                     </li>
                     <li>
                         <p class="navLink"> @Html.ActionLink("About", "About", "Home", null, new { @class = "actionLink" }) </p>
